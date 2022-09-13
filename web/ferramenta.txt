@@ -1,0 +1,8 @@
+Vite --> é uma ferramenta que ajuda criar projetos tanto vue, React etc e ele é muito rapido. Pra que precisa ele ? Assim como no server a gente usou o ts-node-dev pra converte nosso codigo typescript em JS pro node conseguir entender, vai ter muita coisa 
+no projeto React, vue que não é entendido pelo browser, ou seja o vite vai fazer a compilação, vai converte esse codigo que o browser entenda
+
+npm create vite@latest
+Y
+name:
+React
+typescript

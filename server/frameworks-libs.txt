@@ -1,0 +1,5 @@
+express --> Micro framework, um conjunto de codigo bem pequeno, facilitando escrever coisas bem comuns em aplicações back-ends so que dentro do node(rotas, imports)
+
+lib typescript --> linguagem de programação de tipagem alta/tipagem statica
+
+npm i @types/express -D --> porque o express não entende o typescript de forma nativa, com isso tem instalar esse pacote adicional

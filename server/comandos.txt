@@ -1,0 +1,9 @@
+npm init -y --> a flag -y é pra da yes/next em tudo que perguntar no terminal, com isso é criado o arquivo de dependencias(libs) 
+do projeto, que tem o core do nosso projeto(nome, descrição, o arquivo main que é o primeiro arquivos a ser carregado ao iniciar 
+o projeto)
+
+npx serve pra a gente executar algum executavel que a gente tenha instalado no nosso projeto, por exemplo a lib typescript
+
+npx tsc --init --> cria um arquivos de configuração do typescript
+
+npm run build --> tsc cria um arquivo JS, ou seja um arquivo compilado/convertido para web

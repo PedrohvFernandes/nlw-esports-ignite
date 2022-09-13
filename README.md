@@ -10,7 +10,7 @@
 ## 🔖 Layout, prototipo e demonstração de como sera feito a aplicação
   - [Prototipo](https://www.figma.com/file/V3aoeJTXbpXU9yBYFpsr5J/NLW-eSports-(Community)?node-id=6%3A23)
 
-## 🌐 Demonstração do app na web:
+## 🌐 Demonstração do app na web e mobile:
 <img width='350' src=''/>
 
 

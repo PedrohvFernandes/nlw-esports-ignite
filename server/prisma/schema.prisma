@@ -10,6 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// Colocar o alt
 model Game {
   id        String @id @default(uuid())
   title     String

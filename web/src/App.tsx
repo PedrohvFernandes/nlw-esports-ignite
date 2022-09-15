@@ -11,6 +11,7 @@ interface Game {
   id: string
   title: string
   bannerUrl: string
+  alt: string
   _count: {
     ads: number
   }
@@ -52,6 +53,7 @@ function App() {
               bannerUrl={game.bannerUrl}
               title={game.title}
               adsCount={game._count.ads}
+              alt={game.alt}
               key={game.id}
             />
           )

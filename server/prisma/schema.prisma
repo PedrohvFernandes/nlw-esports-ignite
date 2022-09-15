@@ -10,11 +10,21 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// Colocar o alt
+// Colocar uma nova coluna tabela, apos inserir dados(linhas nela) e rodar o npx prisma migrate dev ele vai apontar esse erro: Porque ja tem dados e na tabela
+// Error: 
+// ⚠️ We found changes that cannot be executed:
+
+//   • Step 0 Added the required column `alt` to the `Game` table without a default value. There are 8 rows in this table, it is not possible to execute this step.
+
+// You can use prisma migrate dev --create-only to create the migration file, and manually modify it to address the underlying issue(s).
+// Then run prisma migrate dev to apply it and verify it works.
+
+// Com isso é preciso colocar alt? String . Como já tem dados na tabela, não dá para incluir coluna "not null". e a ? faz com que deixa não obrigatorio, ou seja null https://www.prisma.io/docs/concepts/components/prisma-schema/data-model https://www.prisma.io/docs/concepts/components/prisma-migrate#production-and-testing-environments
 model Game {
   id        String @id @default(uuid())
   title     String
   bannerUrl String
+  alt       String? @unique
 
   ads Ad[]
 }

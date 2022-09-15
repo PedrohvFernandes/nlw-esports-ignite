@@ -5,7 +5,7 @@
 </p>
 
 ## Sobre:
-### Uma aplicação web e mobile onde gamers conseguem ter o seu DUO no seu jogo preferido(lol, cs:go etc) e entrar na comunidade discord do seu DUO, com um simples click 😁.
+### Uma landing page web e mobile onde gamers conseguem ter o seu DUO no seu jogo preferido(lol, cs:go etc) e entrar na comunidade discord do seu DUO, com um simples click 😁.
 
 ## 🔖 Layout, prototipo e demonstração de como sera feito a aplicação
   - [Prototipo](https://www.figma.com/file/V3aoeJTXbpXU9yBYFpsr5J/NLW-eSports-(Community)?node-id=6%3A23)

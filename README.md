@@ -21,16 +21,23 @@
 ## ✨Tecnologias:
 
 ### Principais Stacks:
+  - React
+  - ReactNative
+  - TypeScript
+  - Node
+  - Vite
 
-
-### Secunderias Stacks:
-
+### Secundarias Stacks:
+  - TailwindCSS
 
 ### Serviços usados:
 
 
 ## 🛠️ Features:
-
+  - Listagem de games com contagem de anúncios
+  - Criação de novo anúncio
+  - Listagem de anúncios por game
+  - Buscar discord pelo ID do anúncio
 
 ## 🛠️ Futuras Features:
 

@@ -62,7 +62,7 @@ app.post('/games/:id/ads', async (req, res) => {
   return res.status(201).json(ad)
 })
 
-// '/games/:id/ads' --> concatenação de recursos e no express pra identificar que o id é um parametro ou seja uma info dinamica eu preciso colocar dois pontos na frente do id --> '/games/324234/ads' --> return 324234
+// '/games/:id/ads' --> concatenação de recursos e no express pra identificar que o id é um parametro(um route param pelo express) ou seja uma info dinamica eu preciso colocar dois pontos na frente do id --> '/games/324234/ads' --> return 324234
 app.get('/games/:id/ads', async (req, res) => {
   const gameId = req.params.id
 

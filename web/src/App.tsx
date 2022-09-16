@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
+import * as Dialog from '@radix-ui/react-dialog'
 
 import { GameBanner } from './components/GameBanner'
 
 import './styles/main.css'
 
 import logoImg from './assets/Logo-nlw-esports.svg'
-import { FormsCreateAdBanner } from './components/FormsCreateAdBanner'
+import { CreateAdModal } from './components/CreateAdModal'
+import { CreateAdBanner } from './components/CreateAdBanner'
 
 interface Game {
   id: string
@@ -60,7 +62,11 @@ function App() {
         })}
       </div>
 
-      <FormsCreateAdBanner />
+      <Dialog.Root>
+        <CreateAdBanner />
+        <CreateAdModal />
+      </Dialog.Root>
+      
     </div>
   )
 }

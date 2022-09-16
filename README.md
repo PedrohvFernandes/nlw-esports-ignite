@@ -48,6 +48,7 @@
 - Criação de novo anúncio
 - Listagem de anúncios por game
 - Buscar discord pelo ID do anúncio
+- Notificações push
 
 ## 🛠️ Futuras Features:
 

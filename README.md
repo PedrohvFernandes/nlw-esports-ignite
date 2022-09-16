@@ -27,6 +27,7 @@
 
 - React
 - ReactNative
+- Expo
 - TypeScript
 - Node
 - Vite
@@ -37,6 +38,7 @@
 - TailwindCSS
 - Prisma(ORM)
 - RadixUi
+- Phosphor icons
 
 ### Serviços usados:
 

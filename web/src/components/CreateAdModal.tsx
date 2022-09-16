@@ -7,6 +7,7 @@ import * as ToggleGroup from '@radix-ui/react-toggle-group'
 import { Check, GameController } from 'phosphor-react'
 
 import { Input } from './Form/Input'
+import axios from 'axios'
 
 interface Game {
   id: string
@@ -16,24 +17,45 @@ interface Game {
 export function CreateAdModal() {
   const [games, setGames] = useState<Game[]>([])
   const [weekDays, setWeekDays] = useState<string[]>([])
+  const [useVoiceChannel, setUseVoiceChannel] = useState(false)
 
   console.log(weekDays)
 
   useEffect(() => {
-    fetch('http://localhost:3333/games')
-      .then(res => res.json())
-      .then(data => {
-        setGames(data)
-      })
+    axios('http://localhost:3333/games').then(res => {
+      setGames(res.data)
+    })
   }, [])
 
-  function handleCreateAd(event: FormEvent) {
+  async function handleCreateAd(event: FormEvent) {
     event.preventDefault()
 
     const formData = new FormData(event.target as HTMLFormElement)
     const data = Object.fromEntries(formData)
 
     console.log(data)
+    console.log(weekDays)
+    console.log(useVoiceChannel)
+
+    // Validação:
+    if (!data.name) {
+      return
+    }
+    try {
+      axios.post(`http://localhost:3333/games/${data.game}/ads`, {
+        name: data.name,
+        yearPlaying: Number(data.yearPlaying),
+        discord: data.discord,
+        weekDays: weekDays.map(Number),
+        hoursStart: data.hoursStart,
+        hourEnd: data.hourEnd,
+        useVoiceChannel: useVoiceChannel
+      })
+      alert('Anuncia criado com sucesso!')
+    } catch (e) {
+      console.log(e)
+      alert('Erro ao criar o anuncio!')
+    }
   }
 
   return (
@@ -52,6 +74,7 @@ export function CreateAdModal() {
               Qual o game?
             </label>
             <select
+              name="game"
               id="game"
               className="bg-zinc-900 py-3 px-4 rounded text-sm placeholder:text-zinc-500 outline-none appearance-none"
               defaultValue=""
@@ -73,7 +96,11 @@ export function CreateAdModal() {
             <label htmlFor="name" className="font-semibold">
               Seu nome (ou nickname)
             </label>
-            <Input id="name" placeholder="Como te chamam dentro do game?" />
+            <Input
+              name="name"
+              id="name"
+              placeholder="Como te chamam dentro do game?"
+            />
           </div>
 
           <div className="grid grid-cols-2 gap-6">
@@ -82,6 +109,7 @@ export function CreateAdModal() {
                 Joga há quantos anos?
               </label>
               <Input
+                name="yearPlaying"
                 id="yearPlaying"
                 min={0}
                 type="number"
@@ -92,7 +120,7 @@ export function CreateAdModal() {
               <label htmlFor="discord" className="font-semibold">
                 Qual o seu Discord?
               </label>
-              <Input id="discord" placeholder="Usuário#0000" />
+              <Input id="discord" name="discord" placeholder="Usuário#0000" />
             </div>
           </div>
 
@@ -178,14 +206,34 @@ export function CreateAdModal() {
                 Qual horário do dia?
               </label>
               <div className="grid grid-cols-2 gap-2">
-                <Input id="hourStart" type="time" placeholder="De" />
-                <Input id="hourEnd" type="time" placeholder="Até" />
+                <Input
+                  id="hoursStart"
+                  name="hoursStart"
+                  type="time"
+                  placeholder="De"
+                />
+                <Input
+                  id="hourEnd"
+                  name="hourEnd"
+                  type="time"
+                  placeholder="Até"
+                />
               </div>
             </div>
           </div>
 
           <label className="mt-2 flex items-center gap-2 text-sm cursor-pointer">
-            <Checkbox.Root className="w-6 h-6 p-1 rounded bg-zinc-900">
+            <Checkbox.Root
+              checked={useVoiceChannel}
+              className="w-6 h-6 p-1 rounded bg-zinc-900"
+              onCheckedChange={checked => {
+                if (checked === true) {
+                  setUseVoiceChannel(true)
+                } else {
+                  setUseVoiceChannel(false)
+                }
+              }}
+            >
               <Checkbox.Indicator>
                 <Check className="w-4 h-4 text-emerald-400" />
               </Checkbox.Indicator>

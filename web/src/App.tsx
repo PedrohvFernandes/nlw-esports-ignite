@@ -9,6 +9,8 @@ import logoImg from './assets/Logo-nlw-esports.svg'
 import { CreateAdModal } from './components/CreateAdModal'
 import { CreateAdBanner } from './components/CreateAdBanner'
 
+import axios from 'axios'
+
 interface Game {
   id: string
   title: string
@@ -29,10 +31,9 @@ function App() {
   const [games, setGames] = useState<Game[]>([])
 
   useEffect(() => {
-    fetch('http://localhost:3333/games')
-      .then(res => res.json())
-      .then(data => {
-        setGames(data)
+    axios('http://localhost:3333/games')
+      .then(res => {
+        setGames(res.data)
       })
   }, [])
 

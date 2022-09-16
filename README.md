@@ -51,6 +51,10 @@
 - Notificações push
 
 ## 🛠️ Futuras Features:
+- Layout responsivo
+- Validação no front-end/Back-end ao enviar os dados
+- Usar o radix select no input de escolher o game
+- Ouath(Discord/Twitch)
 
 ## 👨‍💻 Autor:
 

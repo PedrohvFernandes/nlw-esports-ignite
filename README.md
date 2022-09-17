@@ -54,12 +54,19 @@
 - Notificações push
 
 ## 🛠️ Futuras Features e Atualizações:
-- Layout responsivo e um carousel para conseguir adicionar mais cardGames na lista
-- Validação no Front-end/Back-end ao enviar os dados
-- Loading ao enviar os dados(Mostrar mensagem do error/ok) e recarregar os games para mostrar que o anuncio foi criado
-- Usar o radix select no input de escolher o game
-- Abrir um modal ao clicar em um cardGame na aplicação web pra mostrar os anúncios listados
-- Ouath(Discord/Twitch)
+- Web:
+  - Layout responsivo e um carousel para conseguir adicionar mais cardGames na lista
+  - Loading ao enviar os dados(Mostrar mensagem do error/ok) e recarregar os games para mostrar que o anuncio foi criado
+  - Usar o radix select no input de escolher o game
+  - Abrir um modal ao clicar em um cardGame na aplicação web pra mostrar os anúncios listados
+  - Ouath(Discord/Twitch)
+
+- Mobile:
+  - Push Notification melhorada(ex: quando alguem cadastrar que joga lol ou qual quer outro game e a pessoa marcou interesse no lol recebe uma notificação via discord(Oauth no back-end)/push notification que alguem cadastrou um anuncio no lol. Ou seja uma verificação no back-end)
+  - Modal para cadastrar novos anúncios
+
+- Ambos:
+  - Validação no Front-end/Back-end ao enviar os dados  
 
 ## 👨‍💻 Autor:
 

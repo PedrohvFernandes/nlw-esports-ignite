@@ -14,9 +14,16 @@
 
 ## 🌐 Demonstração do app na web e mobile:
 
+### Web:
 <img src='https://github.com/PedrohvFernandes/NLW-eSports-Ignite/blob/main/screenshot/screens/web/Screen1.png'/>
 <img src='https://github.com/PedrohvFernandes/NLW-eSports-Ignite/blob/main/screenshot/screens/web/Screen2.png'/>
 <img src='https://github.com/PedrohvFernandes/NLW-eSports-Ignite/blob/main/screenshot/screens/web/Screen3.png'/>
+
+### Mobile:
+<img width='300' src='https://github.com/PedrohvFernandes/NLW-eSports-Ignite/blob/main/screenshot/screens/Mobile/Screen1.jpeg'/>
+<img width='300' src='https://github.com/PedrohvFernandes/NLW-eSports-Ignite/blob/main/screenshot/screens/Mobile/Screen2.jpeg'/>
+<img width='300' src='https://github.com/PedrohvFernandes/NLW-eSports-Ignite/blob/main/screenshot/screens/Mobile/Screen3.jpeg'/>
+
 
 
 ## Deploy

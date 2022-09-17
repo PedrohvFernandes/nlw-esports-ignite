@@ -54,11 +54,11 @@
 - Notificações push
 
 ## 🛠️ Futuras Features e Atualizações:
-- Layout responsivo
+- Layout responsivo e um carousel para conseguir adicionar mais cardGames na lista
 - Validação no Front-end/Back-end ao enviar os dados
 - Loading ao enviar os dados(Mostrar mensagem do error/ok) e recarregar os games para mostrar que o anuncio foi criado
 - Usar o radix select no input de escolher o game
-- Abrir um modal ao clicar em um cardGame na aplicação web pra mostrar os anúncios listados 
+- Abrir um modal ao clicar em um cardGame na aplicação web pra mostrar os anúncios listados
 - Ouath(Discord/Twitch)
 
 ## 👨‍💻 Autor:
